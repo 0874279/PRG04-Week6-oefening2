@@ -12,6 +12,8 @@ class Player {
         this.width = 61;
         this.height = 102;
 
+        document.getElementsByTagName("ui")[0].innerHTML = "Score: 0";
+
         this.div = document.createElement("player");
         parent.appendChild(this.div);
 
