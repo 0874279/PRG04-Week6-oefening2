@@ -4,11 +4,12 @@ var Car = (function () {
         this.div = document.createElement("car");
         parent.appendChild(this.div);
         this.x = -168;
-        this.y = (Math.random() * 5) * 120;
+        this.y = (Math.random() * 5) * 160;
         this.width = 168;
         this.height = 108;
         this.speed = Math.random() * 2 + 2;
         this.setColor();
+        this.update();
     }
     Car.prototype.update = function () {
         this.x += this.speed;
@@ -62,11 +63,12 @@ var Level = (function () {
         this.cars = new Array();
         this.div = document.createElement("level");
         document.body.appendChild(this.div);
-        setInterval(function () { return _this.createCar(); }, 1000);
+        setInterval(function () { return _this.createCar(); }, 1400);
         this.player = new Player(this.div);
     }
     Level.prototype.createCar = function () {
         this.cars.push(new Car(this.div));
+        console.log("aantal autos: " + this.cars.length);
     };
     Level.prototype.update = function () {
         this.player.update();
@@ -100,6 +102,16 @@ var Game = (function () {
 window.addEventListener("load", function () {
     new Game();
 });
+var Grave = (function () {
+    function Grave(x, y, parent) {
+        this.div = document.createElement("grave");
+        parent.appendChild(this.div);
+        this.x = x;
+        this.y = y;
+        this.div.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
+    }
+    return Grave;
+}());
 var Util = (function () {
     function Util() {
     }

@@ -13,11 +13,12 @@ class Car {
         parent.appendChild(this.div);
 
         this.x = -168;
-        this.y = (Math.random() * 5) * 120;
+        this.y = (Math.random() * 5) * 160;
         this.width = 168;
         this.height = 108;
         this.speed = Math.random() * 2 + 2;
         this.setColor();
+        this.update();
     }
 
     public update(): void {

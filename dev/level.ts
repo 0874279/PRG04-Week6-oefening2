@@ -16,12 +16,13 @@ class Level {
         this.div = document.createElement("level");
         document.body.appendChild(this.div);
         
-        setInterval(()=> this.createCar(), 1000);
+        setInterval(()=> this.createCar(), 1400);
         this.player = new Player(this.div);
     }
 
     private createCar():void {
         this.cars.push(new Car(this.div));
+        console.log("aantal autos: " + this.cars.length);
     }
 
     public update() : void {
@@ -35,7 +36,7 @@ class Level {
                 // hier moet je het volgende doen:
                 // 1 - verwijder het speler element uit de DOM
                 // 2 - zet this.player op undefined en roep de update niet meer aan
-                // 3 - maak in level.ts een grafsteentje op de plek waar je dood ging met 'let g = new Grave(x,y)'
+                // 3 - maak in level.ts een grafsteentje op de plek waar je dood ging met 'let g = new Grave(x,y,this.div)'
             }
         }
         

@@ -31,9 +31,9 @@ car {
 	background-image: url('../images/car.png');
 }
 
-truck {
-	width:281px; min-height:155px;
-	background-image: url('../images/truck.png');
+grave {
+	width:129px; min-height:110px;
+	background-image: url('../images/grave.png');
 }
 
 player {
