@@ -4,7 +4,7 @@ var Car = (function () {
         this.div = document.createElement("car");
         parent.appendChild(this.div);
         this.x = -168;
-        this.y = (Math.random() * 5) * 160;
+        this.y = Math.ceil(Math.random() * 5) * 110;
         this.width = 168;
         this.height = 108;
         this.speed = Math.random() * 2 + 2;
