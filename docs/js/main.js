@@ -32,9 +32,11 @@ var Player = (function () {
         this.y = parent.clientHeight - 102;
         this.width = 61;
         this.height = 102;
+        document.getElementsByTagName("ui")[0].innerHTML = "Score: 0";
         this.div = document.createElement("player");
         parent.appendChild(this.div);
         window.addEventListener("keydown", function (e) { return _this.onKeyDown(e); });
+        document.getElementsByTagName("ui")[0].innerHTML = "SCORE 0";
     }
     Player.prototype.update = function () {
         this.div.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
@@ -63,6 +65,9 @@ var Level = (function () {
         this.cars = new Array();
         this.div = document.createElement("level");
         document.body.appendChild(this.div);
+        var ui = document.createElement("ui");
+        this.div.appendChild(ui);
+        ui.innerHTML = "SCORE 0";
         setInterval(function () { return _this.createCar(); }, 1400);
         this.player = new Player(this.div);
     }

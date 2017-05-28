@@ -18,6 +18,9 @@ class Player {
         parent.appendChild(this.div);
 
         window.addEventListener("keydown", (e:KeyboardEvent) => this.onKeyDown(e));
+
+        // toon de score - tel hier 1 punt bij op, elke keer dat je boven in beeld komt
+        document.getElementsByTagName("ui")[0].innerHTML = "SCORE 0";
     }
     
     public update() : void {

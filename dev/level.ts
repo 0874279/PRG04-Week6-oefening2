@@ -15,6 +15,10 @@ class Level {
     constructor() {    
         this.div = document.createElement("level");
         document.body.appendChild(this.div);
+
+        let ui = document.createElement("ui");
+        this.div.appendChild(ui);
+        ui.innerHTML = "SCORE 0";
         
         setInterval(()=> this.createCar(), 1400);
         this.player = new Player(this.div);

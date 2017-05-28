@@ -2,6 +2,8 @@
 
 ## Flappy Crossroads
 
+![Crossroads](docs/images/screenshot.png?raw=true "Crossroads")
+
 Links in beeld verschijnen met een setInterval telkens nieuwe auto's die naar rechts rijden. Echter, de auto's blijven eeuwig door rijden, ook nadat ze uit beeld zijn. 
 
 Het karakter is bestuurbaar en logt een console bericht als hij tegen een auto aan loopt.
